@@ -22,7 +22,7 @@ go run cli.go mx --host github.com
 
 ```
 
-Which will return ns for github.com:
+Which will return Name server for github.com:
 
 ```
 dns1.p08.nsone.net.
@@ -33,7 +33,6 @@ ns-1283.awsdns-32.org.
 dns2.p08.nsone.net.
 dns4.p08.nsone.net.
 ns-1707.awsdns-21.co.uk.
-
 ```
 IP address of the host:
 ```
