@@ -35,20 +35,17 @@ dns4.p08.nsone.net.
 ns-1707.awsdns-21.co.uk.
 
 ```
-
 IP address of the host:
 ```
 140.82.121.3
 
 ```
-
 CNAME of the host:
 
 ```
 github.com.
 
 ```
-
 and MX record:
 
 ```
@@ -59,7 +56,6 @@ alt4.aspmx.l.google.com. 10
 alt3.aspmx.l.google.com. 10
 
 ```
-
 List of commands can be found by issuing:
 
 ``` go
