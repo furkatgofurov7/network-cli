@@ -18,11 +18,11 @@ go run cli.go ns --host github.com
 go run cli.go ip --host github.com
 go run cli.go cname --host github.com
 go run cli.go mx --host github.com
-
+go run cli.go port --host github.com
 
 ```
 
-Which will return Name server for github.com:
+Which will return Name server of the host:
 
 ```
 dns1.p08.nsone.net.
@@ -43,7 +43,7 @@ CNAME of the host:
 ```
 github.com.
 ```
-and MX record:
+MX record of the host:
 
 ```
 aspmx.l.google.com. 1
@@ -52,6 +52,12 @@ alt2.aspmx.l.google.com. 5
 alt4.aspmx.l.google.com. 10
 alt3.aspmx.l.google.com. 10
 ```
+and port:
+
+```
+https port: 443
+```
+
 List of commands can be found by issuing:
 
 ``` go

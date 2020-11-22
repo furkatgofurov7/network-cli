@@ -12,7 +12,7 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "Website Lookup CLI"
-	app.Usage = "It let's you query IP addresses, CNAMEs, MX records and Name Servers!"
+	app.Usage = "It let's you query IP addresses, CNAMEs, MX records, Name Servers and Ports!"
 
 	myFlags := []cli.Flag{
 		&cli.StringFlag {
@@ -79,6 +79,24 @@ func main() {
 				for i :=0; i < len(mx); i++ {
 					fmt.Println(mx[i].Host, mx[i].Pref)
 				}
+				return nil
+			},
+		},
+		{
+			Name: "port",
+			Usage: "Looks up the port for the given network and service",
+			Flags: myFlags,
+			Action: func (c *cli.Context) error {
+				// LookupPort receives 2 args as follows:
+				// LookupPort(network, service string)
+				// network can be: "tcp", "tcp4", "tcp6", "udp", "udp4", "udp6"
+				// service arg can be any protocol supported by above provided network options.
+				port, err := net.LookupPort("tcp", "https")
+				if err != nil {
+					fmt.Println(err)
+					return err
+				}
+				fmt.Println("https port:", port)
 				return nil
 			},
 		},
